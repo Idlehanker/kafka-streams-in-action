@@ -48,12 +48,9 @@ public class KafkaStreamsYellingApp {
         StreamsConfig streamsConfig = new StreamsConfig(props);
 
         Serde<String> stringSerde = Serdes.String();
-
         StreamsBuilder builder = new StreamsBuilder();
 
         KStream<String, String> simpleFirstStream = builder.stream("src-topic", Consumed.with(stringSerde, stringSerde));
-
-
         KStream<String, String> upperCasedStream = simpleFirstStream.mapValues(String::toUpperCase);
 
         upperCasedStream.to( "out-topic", Produced.with(stringSerde, stringSerde));

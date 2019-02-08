@@ -35,5 +35,11 @@ public class PurchaseKey {
     @Override
     public int hashCode() {
         return Objects.hash(customerId, transactionDate);
+
+    }
+
+    @Override
+    public String toString(){
+        return String.format("{'customId':'%s', 'transactionDate':'%s'}", customerId,transactionDate);
     }
 }

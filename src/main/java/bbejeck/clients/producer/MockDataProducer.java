@@ -383,6 +383,7 @@ public class MockDataProducer {
 
     private static void init() {
         if (producer == null) {
+
             LOG.info("Initializing the producer");
             Properties properties = new Properties();
             properties.put("bootstrap.servers", "localhost:9092");
