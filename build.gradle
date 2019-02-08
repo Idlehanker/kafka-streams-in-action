@@ -24,6 +24,17 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 
+task runBasicChapter_2_producer(type: JavaExec){
+    classpath sourceSets.main.runtimeClasspath
+    main = "bbejeck.chapter_2.producer.SimpleProducer"
+}
+
+task runBasicChapter_2_consumer(type: JavaExec){
+    classpath sourceSets.main.runtimeClasspath
+    main = "bbejeck.chapter_2.consumer.ThreadedConsumerExample"
+}
+
+
 task runZmartAdvancedChapter_3(type: JavaExec){
     classpath sourceSets.main.runtimeClasspath
     main = "bbejeck.chapter_3.ZMartKafkaStreamsAdvancedReqsApp"
